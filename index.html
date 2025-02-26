@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pottery With Debby - Product</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <!--TAILWIND PLAY CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Brand Colors
+    brand_navy: "#2D3047",
+    brand_coral: "#EE655B",
+    brand_pink: "#FFCBC6",
+    brand_light: "#FFF8F8"-->
+
+    <!--Font Awesome Connection -->
+    <script
+      src="https://kit.fontawesome.com/144a64cf0a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header flex justify-between">
+      <div class="logo m-2 lg:max-w-[300px] sm:w-[250px]">
+        <a href="#">
+          <!--Logo Image -->
+          <img
+            src="/images/potteryLogo.png"
+            alt="Pottery with Debby Logo with Coral Vase"
+          />
+        </a>
+      </div>
+      <nav class="flex m-2 nav-links text-[#FFF8F8] gap-2">
+        <div
+          class="search-container bg-[#FFF8F8] text-[#2D3047] px-2 rounded-md"
+        >
+        <form action="#">
+          <input type="text" placeholder="Search..." class="focus:outline-none" />
+          <button type="submit" class="">
+            <i class="fa-solid fa-magnifying-glass active:text-[#EE655B]"></i>
+          </button>
+        </form>
+        </div>
+        <a href="#"><i class="fa-solid fa-heart hover:text-[#FFCBC6]"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i> </a>
+        <a href="#"><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i></a>
+        <a href="#"><i class="fa-solid fa-bars hover:text-[#FFCBC6]"></i></a>
+      </nav>
+    </header>
+
+    <!--Product Description and Photos Section -->
+    <section class="product">
+      <div>
+        <div>
+          <div>
+            <!--Column Extra Pictures-->
+          </div>
+
+          <!--Product Image Big -->
+        </div>
+        <div>
+          <h3>Special Title</h3>
+          <h2>Pottery Piece Name</h2>
+          <p>description</p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <button>Add to Bag</button>
+          <button>Favorite</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Highlight Section -->
+    <section class="highlight">
+      <h2>Highlights</h2>
+      <div>
+        <!--Card 1-->
+        <div class="">
+          <img
+            src="/images/CircleVase.JPG"
+            alt="Circle Vase with Gold details"
+            class=""
+          />
+          <h4 class="">Title</h4>
+          <p class="">Description</p>
+        </div>
+        <!--Card 2-->
+        <div class="">
+          <img
+            src="/images/MutliColorVase.JPG"
+            alt="Multicolored vase with specks all around"
+            class=""
+          />
+          <h4 class="">Title</h4>
+          <p class="">Description</p>
+        </div>
+        <!--Card 3-->
+        <div class="">
+          <img
+            src="/images/OrangeCeramic.JPG"
+            alt="Orange circle vase with a man's face"
+            class=""
+          />
+          <h4 class="">Title</h4>
+          <p class="">Description</p>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- 
+  CHAT HELP
+
+  Q: Why is my input box when selected have a black outline?
+  A: <input type="text" class="border p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+
+  -->
+</html>
