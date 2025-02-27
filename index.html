@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="font-['Montserrat']">
     <!-- Header -->
     <header class="header flex justify-between">
       <div class="logo m-2 lg:max-w-[300px] sm:w-[250px]">
@@ -43,29 +43,69 @@
         <div
           class="search-container bg-[#FFF8F8] text-[#2D3047] px-2 rounded-md"
         >
-        <form action="#">
-          <input type="text" placeholder="Search..." class="focus:outline-none" />
-          <button type="submit" class="">
-            <i class="fa-solid fa-magnifying-glass active:text-[#EE655B]"></i>
-          </button>
-        </form>
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="focus:outline-none"
+            />
+            <button type="submit" class="">
+              <i class="fa-solid fa-magnifying-glass active:text-[#EE655B]"></i>
+            </button>
+          </form>
         </div>
         <a href="#"><i class="fa-solid fa-heart hover:text-[#FFCBC6]"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i> </a>
-        <a href="#"><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i></a>
+        <a href="#"
+          ><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i>
+        </a>
+        <a href="#"
+          ><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i
+        ></a>
         <a href="#"><i class="fa-solid fa-bars hover:text-[#FFCBC6]"></i></a>
       </nav>
     </header>
 
     <!--Product Description and Photos Section -->
-    <section class="product">
-      <div>
-        <div>
-          <div>
-            <!--Column Extra Pictures-->
+    <section class="product bg-[#FFF8F8] py-8 p-8">
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-row">
+          <div class="flex flex-col space-y-2 w-1/4">
+            <img
+              src="/images/BlueCeramicFront.JPG"
+              alt="Blue ceramic pot front view"
+              class="cursor-pointer thumbnail hover:brightness-75"
+              onclick="changeMain(this)"
+            />
+            <img
+              src="/images/BlueCeramicBack.JPG"
+              alt="Blue ceramic pot back view"
+              class="cursor-pointer thumbnail hover:brightness-75"
+              onclick="changeMain(this)"
+            />
+            <video
+              width="600"
+              controls
+              muted
+              class="cursor-pointer thumbnail hover:brightness-75"
+              onclick="changeMain(this)"
+            >
+              <source src="/images/BlueCeramicVideo.MP4" type="video/mp4" />
+            </video>
+            <img
+              src="/images/BlueCeramicInside.JPG"
+              alt="Blue ceramic pot inside view"
+              class="cursor-pointer thumbnail hover:brightness-75"
+              onclick="changeMain(this)"
+            />
           </div>
-
           <!--Product Image Big -->
+          <img
+            id="mainDisplay"
+            src="/images/BlueCeramicFront.JPG"
+            alt="Main Display"
+            width="600"
+            class=""
+          />
         </div>
         <div>
           <h3>Special Title</h3>
@@ -83,7 +123,7 @@
     </section>
 
     <!--Highlight Section -->
-    <section class="highlight">
+    <section class="highlight bg-[#EE655B] text-[#FFF8F8]">
       <h2>Highlights</h2>
       <div>
         <!--Card 1-->
@@ -118,6 +158,25 @@
         </div>
       </div>
     </section>
+
+    <script>
+      function changeMain(element) {
+        const mainDisplay = document.getElementById("mainDisplay");
+
+        if (element.tagName === "IMG") {
+          //Change photo
+          mainDisplay.src = element.src;
+        } else if (element.tagName === "VIDEO") {
+         
+          //Change to video
+          mainDisplay.outerHTML = `
+        <video id="mainDisplay" width="600" controls muted autoplay>
+          <source src="${element.querySelector("source").src}" type="video/mp4">
+        </video>
+      `;
+        }
+      }
+    </script>
   </body>
 
   <!-- 
@@ -126,5 +185,11 @@
   Q: Why is my input box when selected have a black outline?
   A: <input type="text" class="border p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
 
+  Q: How to do font family with linked google font?
+  A: <body class="font-['Roboto']">
+
+  Q: How to darken image when hovered on
+  A: hover:brightness-75
+  
   -->
 </html>
