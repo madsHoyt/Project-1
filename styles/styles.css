@@ -1,3 +1,12 @@
-.header{
-    background-color: #2d3047;
+.header {
+  background-color: #2d3047;
+}
+
+.highlight {
+  background: rgb(238, 101, 91);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 101, 91, 1) 53%,
+    rgba(255, 203, 198, 1) 94%
+  );
 }

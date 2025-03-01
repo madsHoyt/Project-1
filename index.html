@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pottery With Debby - Product</title>
+    <title>Pottery With Debby - Ocean's Ember Jar</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <!--Google Fonts Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Favicon-->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <!--TAILWIND PLAY CDN -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
@@ -19,18 +28,11 @@
       src="https://kit.fontawesome.com/144a64cf0a.js"
       crossorigin="anonymous"
     ></script>
-    <!--Google Fonts Connection -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body class="font-['Montserrat']">
     <!-- Header -->
-    <header class="header flex justify-between">
-      <div class="logo m-2 lg:max-w-[300px] sm:w-[250px]">
+    <header class="header sticky top-0 flex justify-between p-2 z-2 ">
+      <div class="logo flex max-w-[300px]">
         <a href="#">
           <!--Logo Image -->
           <img
@@ -39,54 +41,55 @@
           />
         </a>
       </div>
-      <nav class="flex m-2 nav-links text-[#FFF8F8] gap-2">
+      <!--Navigation-->
+      <nav class="flex nav-links text-[#FFF8F8] gap-2">
         <div
           class="search-container bg-[#FFF8F8] text-[#2D3047] px-2 rounded-md"
         >
-          <form action="#">
+          <form action="#" class="flex flex-row">
             <input
               type="text"
               placeholder="Search..."
-              class="focus:outline-none"
+              class="focus:outline-none p-1"
             />
             <button type="submit" class="">
               <i class="fa-solid fa-magnifying-glass active:text-[#EE655B]"></i>
             </button>
           </form>
         </div>
-        <a href="#"><i class="fa-solid fa-heart hover:text-[#FFCBC6]"></i></a>
-        <a href="#"
-          ><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i>
-        </a>
-        <a href="#"
-          ><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i
-        ></a>
-        <a href="#"><i class="fa-solid fa-bars hover:text-[#FFCBC6]"></i></a>
+        <div class="flex pt-1 gap-4">
+          <a href="#"><i class="fa-solid fa-heart hover:text-[#FFCBC6]"></i></a>
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i>
+          </a>
+          <a href="#"
+            ><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i
+          ></a>
+        </div>
       </nav>
     </header>
 
     <!--Product Description and Photos Section -->
-    <section class="product bg-[#FFF8F8] py-8 p-8">
-      <div class="flex flex-row gap-4">
-        <div class="flex flex-row">
+    <section class="bg-[#FFF8F8] py-8 p-8 gap-2 scroll-smooth">
+      <div class="flex gap-4">
+        <div class="flex mr-8">
           <div class="flex flex-col space-y-2 w-1/4">
             <img
               src="/images/BlueCeramicFront.JPG"
               alt="Blue ceramic pot front view"
-              class="cursor-pointer thumbnail hover:brightness-75"
+              class="cursor-pointer thumbnail hover:brightness-75 max-sm:w-18 max-sm:h-18 md:w-25 md:h-25 lg:w-35 lg:h-35 object-cover"
               onclick="changeMain(this)"
             />
             <img
               src="/images/BlueCeramicBack.JPG"
               alt="Blue ceramic pot back view"
-              class="cursor-pointer thumbnail hover:brightness-75"
+              class="cursor-pointer thumbnail hover:brightness-75 w-35 h-35 object-cover"
               onclick="changeMain(this)"
             />
             <video
               width="600"
-              controls
               muted
-              class="cursor-pointer thumbnail hover:brightness-75"
+              class="cursor-pointer thumbnail hover:brightness-75 w-35 h-35 object-cover"
               onclick="changeMain(this)"
             >
               <source src="/images/BlueCeramicVideo.MP4" type="video/mp4" />
@@ -94,7 +97,7 @@
             <img
               src="/images/BlueCeramicInside.JPG"
               alt="Blue ceramic pot inside view"
-              class="cursor-pointer thumbnail hover:brightness-75"
+              class="cursor-pointer thumbnail hover:brightness-75 w-35 h-35 object-cover"
               onclick="changeMain(this)"
             />
           </div>
@@ -103,77 +106,218 @@
             id="mainDisplay"
             src="/images/BlueCeramicFront.JPG"
             alt="Main Display"
-            width="600"
-            class=""
+            class="w-150 h-150 object-cover"
           />
         </div>
-        <div>
-          <h3>Special Title</h3>
-          <h2>Pottery Piece Name</h2>
-          <p>description</p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+        <div class="w-1/2 ml-auto">
+          <h4 class="text-[#EE655B] text-xl">Handcrafted</h4>
+          <h2 class="text-4xl font-bold mb-4 text-[#2D3047]">
+            Ocean's Ember Jar
+          </h2>
+          <p class="text-[#2D3047] text-md">
+            Wheel-thrown ceramic jar with a fitted lid, combining timeless
+            craftsmanship with a striking interplay of colors.
+          </p>
+
+          <ul class="text-[#2D3047] text-md list-disc pl-4 mt-4">
+            <li>
+              <strong
+                >LBM clay fired to cone 10 with 2 coats of blue celadón</strong
+              >
+              - This high-fire process ensures maximum durability, resulting in
+              a strong, vitrified ceramic body. The blue celadón glaze, applied
+              in two layers, deepens the color and enhances the piece's smooth,
+              glossy finish.
+            </li>
+
+            <li>
+              <strong
+                >Tints of orange underglaze shine through the blue glaze,
+                capturing beautiful undertones</strong
+              >
+              - The subtle warmth of the orange underglaze peeks through the
+              celadón, creating a dynamic contrast that shifts with lighting and
+              angle. This unique effect gives the jar a captivating depth and
+              one-of-a-kind character.
+            </li>
+
+            <li>
+              <strong
+                >Thoughtfully designed lid for both aesthetic appeal and
+                function</strong
+              >
+              - The well-fitted lid complements the jar's form, ensuring a
+              seamless silhouette while providing practical usability for
+              storage or display.
+            </li>
+
+            <li>
+              <strong>Hand-thrown for a truly unique, artisanal touch</strong> -
+              The jar carries the natural variations of wheel-thrown pottery,
+              making the piece a one-of-a-kind work of art.
+            </li>
           </ul>
-          <button>Add to Bag</button>
-          <button>Favorite</button>
+          <div class="flex flex-col items-center p-4 gap-2">
+            <a
+              href="#"
+              class="flex bg-[#2D3047] text-[#FFF8F8] font-medium px-4 py-2 rounded-4xl justify-center w-50 hover:scale-105 transition duration-300 ease-in-out"
+              >Add to Bag</a
+            >
+            <a href="#" class="flex bg-[#FFF8F8] text-[#2D3047] border border-[#2D3047] font-medium px-4 py-2 rounded-4xl justify-center w-50 hover:scale-105 transition duration-300 ease-in-out">Favorite <i class="fa-solid fa-heart p-1"></i></a> 
+            <a href="#similarProducts" class="smooth-scrolling flex bg-[#EE655B] text-[#FFF8F8] font-medium px-4 py-2 rounded-4xl justify-center w-50 hover:scale-105 transition duration-300 ease-in-out">See Similar Products</a>
+          </div>
         </div>
       </div>
     </section>
-
+    <section>
+      <!--svg-->
+      <div class="m-0 p-0">
+        <img src="/images/wave-haikei.svg" class="w-full h-20 object-cover" />
+      </div>
+    </section>
     <!--Highlight Section -->
-    <section class="highlight bg-[#EE655B] text-[#FFF8F8]">
-      <h2>Highlights</h2>
-      <div>
+    <section id="similarProducts" class="highlight text-[#FFF8F8] p-8 pb-16">
+      <h2 class="flex justify-center p-8 font-bold text-4xl">
+        Similar Products
+      </h2>
+      <div class="flex justify-center gap-8">
         <!--Card 1-->
-        <div class="">
-          <img
+        <div id="circleVase" class="relative">
+            <a href="#circleVase"><img
             src="/images/CircleVase.JPG"
             alt="Circle Vase with Gold details"
-            class=""
-          />
-          <h4 class="">Title</h4>
-          <p class="">Description</p>
+            class="w-85 h-100 object-cover hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out rounded-sm"
+          /></a>
+          <button
+            class="absolute top-2 right-2 w-10 h-10 rounded-full bg-[#2D3047] text-[#FFF8F8] text-xl hover:text-[#FFCBC6] hover:scale-105 transition duration-300 ease-in-out"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </button>
         </div>
         <!--Card 2-->
-        <div class="">
-          <img
+        <div id="multicolorVase" class="relative">
+          <a href="#multicolorVase"><img
             src="/images/MutliColorVase.JPG"
             alt="Multicolored vase with specks all around"
-            class=""
-          />
-          <h4 class="">Title</h4>
-          <p class="">Description</p>
+          class="w-85 h-100 object-cover hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out rounded-sm"
+          /></a>
+          <button
+            class="absolute top-2 right-2 w-10 h-10 rounded-full bg-[#2D3047] text-[#FFF8F8] text-xl hover:text-[#FFCBC6] hover:scale-105 transition duration-300 ease-in-out"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </button>
         </div>
         <!--Card 3-->
-        <div class="">
-          <img
+        <div id="orangeCeramic" class="relative">
+          <a href="#orangeCeramic"><img
             src="/images/OrangeCeramic.JPG"
             alt="Orange circle vase with a man's face"
-            class=""
-          />
-          <h4 class="">Title</h4>
-          <p class="">Description</p>
+          class="w-85 h-100 object-cover hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out rounded-sm"
+          /></a>
+          <button
+            class="absolute top-2 right-2 w-10 h-10 rounded-full bg-[#2D3047] text-[#FFF8F8] text-xl hover:text-[#FFCBC6] hover:scale-105 transition duration-300 ease-in-out"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </button>
         </div>
       </div>
     </section>
+    <section>
+      <!--svg-->
+      <div class="m-0 p-0">
+        <img src="/images/wave-haikei-end.svg" class="w-full h-20 object-cover" />
+      </div>
+    </section>
+  <footer class="bg-[#2D3047] text-[#FFF8F8] py-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col items-center">
+    <p>&copy; 2025 Pottery with Debby. All rights reserved.</p>
+  <div class="max-w-xl mx-auto text-[#FFF8F8]">
+      <h2 class="text-center text-3xl font-bold mb-6 pt-6">Email Sign Up</h2>
+      <form class="bg-[#FFF8F8] text-[#2D3047] p-6 rounded-lg shadow-lg space-y-4">
+        <div class="flex gap-4">
+        <!-- First Name -->
+        <div>
+          <label for="firstName" class="block text-[#2D3047] font-semibold">First Name</label>
+          <input type="text" id="firstName" name="firstName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your first name"  />
+        </div>
+
+        <!-- Last Name -->
+        <div>
+          <label for="lastName" class="block text-[#2D3047] font-semibold">Last Name</label>
+          <input type="text" id="lastName" name="lastName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your last name"  />
+        </div>
+        </div>
+        <div class="flex gap-4">
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-[#2D3047] font-semibold">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your email" />
+        </div>
+
+        <!-- Skill Level -->
+        <div>
+          <label for="skillLevel" class="block text-[#2D3047] font-semibold">Skill Level</label>
+          <select id="skillLevel" name="skillLevel" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]">
+            <option value="" disabled selected>Select your skill level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
+      </div>
+        <!-- Newsletter Signup -->
+        <div >
+          <input type="checkbox" id="newsletter" name="newsletter" class="mr-2" />
+          <label for="newsletter" class="text-[#2D3047]">Sign up for our newsletter</label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="w-full bg-[#2D3047] text-[#FFF8F8] font-medium py-3 rounded-xl hover:scale-105 transition duration-300 ease-in-out">Sign Up</button>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Social Media links-->
+    <div class="flex gap-4 mt-4">
+      <a href="#" class="hover:text-[#EE655B]"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-[#EE655B]"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-[#EE655B]"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+    </footer>
 
     <script>
       function changeMain(element) {
         const mainDisplay = document.getElementById("mainDisplay");
 
         if (element.tagName === "IMG") {
-          //Change photo
-          mainDisplay.src = element.src;
+          // Change to image
+          if (mainDisplay.tagName === "VIDEO") {
+            //video --> image
+            mainDisplay.outerHTML = `
+        <img id="mainDisplay" src="${element.src}" alt="Main Display" class="w-150 h-150 object-cover" />
+      `;
+          } else {
+            // Update image source
+            mainDisplay.src = element.src;
+          }
         } else if (element.tagName === "VIDEO") {
-         
-          //Change to video
-          mainDisplay.outerHTML = `
-        <video id="mainDisplay" width="600" controls muted autoplay>
-          <source src="${element.querySelector("source").src}" type="video/mp4">
+          // Change to video
+          if (mainDisplay.tagName === "IMG") {
+            //Image --> Video
+            mainDisplay.outerHTML = `
+        <video id="mainDisplay" muted autoplay class="w-150 h-150 object-cover">
+          <source src="${
+            element.querySelector("source").src
+          }" type="video/mp4" />
         </video>
       `;
+          } else {
+            //do nothing
+          }
         }
       }
     </script>
@@ -182,7 +326,7 @@
   <!-- 
   CHAT HELP
 
-  Q: Why is my input box when selected have a black outline?
+  Q: Why is my input box, when selected, have a black outline?     
   A: <input type="text" class="border p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
 
   Q: How to do font family with linked google font?
@@ -191,5 +335,7 @@
   Q: How to darken image when hovered on
   A: hover:brightness-75
   
+  Q: Ideas for hover effects?
+  A: Change color, size etc... (Those were the ideas I took from it)
   -->
 </html>
